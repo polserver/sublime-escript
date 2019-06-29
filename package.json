@@ -1,6 +1,6 @@
 {
-  "name": "sublime-escriptscript",
-  "version": "0.9.1",
+  "name": "eScript Syntax",
+  "version": "0.9.2",
   "author": "POL Team",
   "repository": "https://github.com/polserver/sublime-escript"
 }
