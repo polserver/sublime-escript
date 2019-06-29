@@ -1,0 +1,159 @@
+{
+
+	//--------------------
+	// ToolTip-Helper preferences
+	//--------------------
+
+	// set debug to true for print info & error messege.
+	"debug": true,
+	// file_name: each file in this array should be exist in 'Tooltip-Helper' folder with the correct file name.
+	// link (optional): in case you want to add link for documentation website.
+	// scope:  must to be valid, so in case you dont know what is the current scope press ctrl+alt+shift+p or
+	// search in scopes.txt file.
+	"files":
+	[
+		{
+			"file_name": "POLeScript-Attributes-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=attributesem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Basic-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=basicem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-BasicIO-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=basicioem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Boat-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=boatoem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-CfgFile-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=cfgfileem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-CliLoc-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=cliLocem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-DataFile-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=datafileem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-File-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=fileem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Guild-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=guildsem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Http-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=httpem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Math-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=Mathem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Npc-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=npcem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-OS-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=osem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Party-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=partyem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-PolSys-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=polsysem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Storage-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=storageem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-MySQL-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=sqlem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Unicode-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=unicodeem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-UO-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=uoem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Util-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=utilem",
+			"scope": "source.polscript"
+		},
+		{
+			"file_name": "POLeScript-Vitals-EM.sublime-tooltip",
+			"link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=vitalsem",
+			"scope": "source.polscript"
+		}
+	],
+	// set timeout to false if you dont want that the tooltip window close.
+	"has_timeout": false,
+	// set key order which determine the order of attributes in tooltip window.
+	"keyorder":
+	[
+		"prototype",
+		"parameter",
+		"explain",
+		"return",
+		"errors",
+		"related",
+		"relatedcfg",
+		"link"
+	],
+	// set the width of tooltip window.
+	"max_width": 700,
+	// set the timeout of tooltip window in milliseconds.
+	"set_timeout": 10000,
+	// set css to tooltip
+	"css": 
+	{
+		"title": 
+		{
+			"color": "white",
+			"text-decoration": "underline"
+		},
+		"content":
+		{
+			"color": "white",
+			"text-decoration": "none"
+		},
+	        "link":
+	        {
+	        	"color": "white",
+			"text-decoration": "underline"
+			
+		}
+	}
+}
