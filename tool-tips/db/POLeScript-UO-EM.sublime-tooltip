@@ -176,10 +176,10 @@
   "GetObjPropertyNames":
   {
     "prototype": "GetObjPropertyNames( object )",
-    "parameter": {
+    "parameter": [{
       "_name": "object",
       "_value": "UObject reference"
-    },
+    }],
     "explain": "Gets all the CProp names set on the object. Use GetObjProperty(object, returned_array[i]) to get the \nCProp value.",
     "return": "Array of strings or Error",
     "error": "\"Invalid parameter type\"",
@@ -192,10 +192,10 @@
   "GetObjtypeByName":
   {
     "prototype": "GetObjtypeByName( name )",
-    "parameter": {
+    "parameter": [{
       "_name": "name",
       "_value": "string"
-    },
+    }],
     "explain": "Finds the matching Object Type number for the obejct named \"name\" Matches on the itemdesc.cfg property \n\"Name\".",
     "return": "Integer ObjType or Error",
     "error": [
@@ -208,10 +208,10 @@
   "GetObjType":
   {
     "prototype": "GetObjType( object )",
-    "parameter": {
+    "parameter": [{
       "_name": "object",
       "_value": "UObject Reference"
-    },
+    }],
     "explain": "Returns the Objtype of an object. Same as ref.objtype. Works for item root classed and character root classed.",
     "return": "Integer ObjType or 0",
     "related": [
@@ -463,10 +463,10 @@
   "ReleaseItem":
   {
     "prototype": "ReleaseItem( item )",
-    "parameter": {
+    "parameter": [{
       "_name": "item",
       "_value": "Item Reference"
-    },
+    }],
     "explain": "Releases an item previously reserved by ReserveItem().",
     "return": "1 on success or Error",
     "error": [
@@ -480,10 +480,10 @@
   "ReserveItem":
   {
     "prototype": "ReserveItem( item )",
-    "parameter": {
+    "parameter": [{
       "_name": "item",
       "_value": "Item Reference"
-    },
+    }],
     "explain": {
       "code": "if(!ReserveItem(item))\n  SendSysMessage(who, \"You cannot use that.\");\n  return;\nendif",
       "__text": "Reserves an item so no other script or client may manipulate it until ReleaseItem() is called.\n  Use this function to prevent nasty exploits like this:"
@@ -563,10 +563,10 @@
   "GetRegionName":
   {
     "prototype": "GetRegionName( object )",
-    "parameter": {
+    "parameter": [{
       "_name": "object",
       "_value": "top level UObject (item/character/npc/etc)"
-    },
+    }],
     "explain": "Get name of [justice] region that Object is in.",
     "return": "String value of \"Region Name\" on success",
     "error": [
@@ -724,10 +724,10 @@
   "FindAccount":
   {
     "prototype": "FindAccount( acctname )",
-    "parameter": {
+    "parameter": [{
       "_name": "acctname",
       "_value": "string"
-    },
+    }],
     "explain": "Gets a player Account Reference by the name of the account.",
     "return": "Account Reference on success",
     "error": [
@@ -751,10 +751,10 @@
   "DestroyMulti":
   {
     "prototype": "DestroyMulti( multi )",
-    "parameter": {
+    "parameter": [{
       "_name": "multi",
       "_value": "Multi Reference"
-    },
+    }],
     "explain": [
       "Deletes a Multi item from the world.",
       "Notes: House: Moves all characters and items inside multi to ground.\n         Boat: Requires hold be empty, deck be empty, and have no mobiles logged-out on boat."
@@ -776,10 +776,10 @@
   "DisableEvents":
   {
     "prototype": "DisableEvents( eventtype )",
-    "parameter": {
+    "parameter": [{
       "_name": "eventtype",
       "_value": "integer combination (bitwise-OR) of constants from SYSEVENT.INC"
-    },
+    }],
     "explain": "Disables the system event(s) defined in sysevent.inc for the current NPC or item control script. Do not use for \"user\" events (see EnableEvents()).",
     "return": "New event mask on success",
     "error": "\"Invalid parameter\"",
@@ -903,10 +903,10 @@
   "GetMenuObjTypes":
   {
     "prototype": "GetMenuObjTypes( menuname )",
-    "parameter": {
+    "parameter": [{
       "_name": "menuname",
       "_value": "static or dynamic menu"
-    },
+    }],
     "explain": [
       "Gets all the objtypes contained in the menu.",
       "Notes: see CreateMenu(), AddMenuItem()"
@@ -919,10 +919,10 @@
   "SetScriptController":
   {
     "prototype": "SetScriptController( who )",
-    "parameter": {
+    "parameter": [{
       "_name": "who",
       "_value": "Character Reference"
-    },
+    }],
     "explain": [
       "Set the \"controller\" of the current script to \"who\".",
       "Notes: This is used to know, for instance, who the fire field walk-on script belongs to so that\n        the reputation/criminal system knows who to punish.",
@@ -1547,10 +1547,10 @@
   "GetSpellDifficulty":
   {
     "prototype": "GetSpellDifficulty( spellid )",
-    "parameter": {
+    "parameter": [{
       "_name": "spellid",
       "_value": "Integer"
-    },
+    }],
     "explain": [
       "Gets spell \"difficulty\" based on spell circle number (config/circles.cfg).",
       "Notes: spells.cfg files define spells and spell ids.\n       \"Difficulty\" values are used in the function CheckSkill()"
@@ -1630,10 +1630,10 @@
   "DisconnectClient":
   {
     "prototype": "DisconnectClient( character )",
-    "parameter": {
+    "parameter": [{
       "_name": "character",
       "_value": "Character Reference"
-    },
+    }],
     "explain": [
       "Disconnects the character's client.",
       "Notes: Fun!"
@@ -1649,10 +1649,10 @@
   "ListEquippedItems":
   {
     "prototype": "ListEquippedItems( who )",
-    "parameter": {
+    "parameter": [{
       "_name": "who",
       "_value": "Character Reference"
-    },
+    }],
     "explain": "Returns a list of items current equipped on character referenced by \"who\"",
     "return": "Array of Item References equipped on \"who\"",
     "error": "\"Invalid parameter\"",
@@ -1859,10 +1859,10 @@
   "SendInstaResDialog":
   {
     "prototype": "SendInstaResDialog( character )",
-    "parameter": {
+    "parameter": [{
       "_name": "character",
       "_value": "Character Reference"
-    },
+    }],
     "explain": [
       "Character's screen fades to black, \"You are Dead\" appears, Character gets menu choice for \nInstares.",
       "Notes: (Rac) Could not get menu dialog to appear, \"Play as ghost\" returned to server no matter what.\n      \"AssumePlayAsGhost\" in uo.cfg made no difference."
@@ -2479,10 +2479,10 @@
   "CancelTarget":
   {
     "prototype": "CancelTarget( of_whom )",
-    "parameter": {
+    "parameter": [{
       "_name": "of_whom",
       "_value": "Character Reference"
-    },
+    }],
     "explain": "If the character has a current Target Reference, it sends the cancel packet. Client response to the original target cursor's script is as if they hit Escape.",
     "return": "0",
     "error": [
@@ -2529,10 +2529,10 @@
   "CloseTradeWindow":
   {
     "prototype": "CloseTradeWindow( character )",
-    "parameter": {
+    "parameter": [{
       "_name": "character",
       "_value": "Character Reference"
-    },
+    }],
     "explain": "Attempts to close the Trade Window a client has open.",
     "return": "1",
     "error": [
@@ -2827,10 +2827,10 @@
   "GetAmount":
   {
     "prototype": "GetAmount( item )",
-    "parameter": {
+    "parameter": [{
       "_name": "item",
       "_value": "Item Reference"
-    },
+    }],
     "explain": [
       "Returns size of item stack.",
       "probably better to use item.amount"
@@ -3115,10 +3115,10 @@
   "ListOfflineMobilesInRealm":
   {
     "prototype": "ListOfflineMobilesInRealm(realm := _DEFAULT_REALM)",
-    "parameter": {
+    "parameter": [{
       "_name": "realm",
       "_value": "String - case-sensitive name of the realm"
-    },
+    }],
     "explain": [
       "returns the list of offline mobiles in a specific realm.",
       "Useful for moving the offline mobiles out of a shadow realm before deleting it."
@@ -3270,10 +3270,10 @@
   "RestartScript":
   {
     "prototype": "RestartScript( npc )",
-    "parameter": {
+    "parameter": [{
       "_name": "npc",
       "_value": "Character Reference (must be an NPC)"
-    },
+    }],
     "explain": [
       "Stops the current master script for an NPC, and starts a new one.",
       "npc.script can be assigned before calling this, to change the master script for an NPC."
@@ -3470,10 +3470,10 @@
   "TargetCoordinates":  
   {
     "prototype": "TargetCoordinates( by_character )",
-    "parameter": {
+    "parameter": [{
       "_name": "by_character",
       "_value": "Character Reference"
-    },
+    }],
     "explain": [
       "Sends a target cursor to a character's client, and waits for the player to target a ground tile.",
       "Notes: Line-of-sight is not checked."
@@ -3527,10 +3527,10 @@
   "CreateMenu":  
   {
     "prototype": "CreateMenu( title )",
-    "parameter": {
+    "parameter": [{
       "_name": "title",
       "_value": "String"
-    },
+    }],
     "explain": "Creates an empty dynamic \"old-style item selection\" menu.",
     "return": "A dynamic menu reference if the menu was created successfully",
     "error": "none (returns 0 on invalid parameter)",
@@ -3633,10 +3633,10 @@
   "EraseGlobalProperty":  
   {
     "prototype": "EraseGlobalProperty( propname )",
-    "parameter": {
+    "parameter": [{
       "_name": "propname",
       "_value": "String"
-    },
+    }],
     "explain": "Removes a property from the global property list. propertyname is case-sensative",
     "return": "1 if the property was erased or did not exist.",
     "error": "\"Invalid parameter type\"",
@@ -3645,10 +3645,10 @@
   "GetGlobalProperty":  
   {
     "prototype": "GetGlobalProperty( propname )",
-    "parameter": {
+    "parameter": [{
       "_name": "propname",
       "_value": "String"
-    },
+    }],
     "explain": "Retrieves the value of a global property. propertyname is case-sensative",
     "return": "On success a script object (string, integer, real, array, etc) containing the value of the named property",
     "error": [
@@ -3730,10 +3730,10 @@
   "PlayLightningBoltEffect":  
   {
     "prototype": "PlayLightningBoltEffect( center_object )",
-    "parameter": {
+    "parameter": [{
       "_name": "center_object",
       "_value": "UObject Reference"
-    },
+    }],
     "explain": "Plays a lightning bolt effect centered on the object.",
     "return": "1 on success",
     "error": "none (returns 0 if invalid parameter).",
@@ -3873,10 +3873,10 @@
   "DestroyItem":  
   {
     "prototype": "DestroyItem( Item )",
-    "parameter": {
+    "parameter": [{
       "_name": "Item",
       "_value": "Item Reference"
-    },
+    }],
     "explain": [
       "Removes an item from the world.  Transmits commands to each client in range of item to reflect this.",
       "Notes: runs the Item's destroy script, if any."
@@ -4560,10 +4560,10 @@
   "GetMultiDimensions":  
   {
     "prototype": "GetMultiDimensions( multiid )",
-    "parameter": {
+    "parameter": [{
       "_name": "multiid",
       "_value": "Multi Graphic ID"
-    },
+    }],
     "explain": "Returns struct with coords of _relative_ distances from center. xmin and ymin are _negative_.",
     "return": "Struct with \"xmin\", \"xmax\", \"ymin\", \"ymax\".",
     "error": [
@@ -4683,10 +4683,10 @@
   "Attach":  
   {
     "prototype": "Attach( character )",
-    "parameter": {
+    "parameter": [{
       "_name": "character",
       "_value": "Character Reference"
-    },
+    }],
     "explain": "Associates the current script to the character. See Detach() too.",
     "return": "1 on success or Error",
     "error": [
@@ -4997,10 +4997,10 @@
   "SendStatus":  
   {
     "prototype": "SendStatus( character )",
-    "parameter": {
+    "parameter": [{
       "_name": "character",
       "_value": "Character Reference"
-    },
+    }],
     "explain": "Send full Status Packet to support Extensions like Resistances, if you add'em via Packet Hook. Use SendStatus to update'em.",
     "return": "1 on success or Error",
     "error": [
@@ -5172,10 +5172,10 @@
   "SendCharacterRaceChanger":  
   {
     "prototype": "SendCharacterRaceChanger( character )",
-    "parameter": {
+    "parameter": [{
       "_name": "character",
       "_value": "Character Reference"
-    },
+    }],
     "explain": "Send Client inside Character Race Changer to change Hair, Beard and Color.",
     "return": "1 on success or Error",
     "error": "\"Invalid parameter\"",
@@ -5204,10 +5204,10 @@
   "UpdateItem":
   {
     "prototype": "UpdateItem( item )",
-    "parameter": {
+    "parameter": [{
       "_name": "item",
       "_value": "Item Reference"
-    },
+    }],
     "explain": "updates the item to every client in range, good to use for example after returning 1 in some packethook and the item get invisible",
     "return": "1 on success or Error",
     "related": "Item",

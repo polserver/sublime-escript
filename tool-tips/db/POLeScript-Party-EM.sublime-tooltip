@@ -30,10 +30,10 @@
 	"DisbandParty":
 {
 	"prototype": "DisbandParty( PartyRef )",
-	"parameter": {
+	"parameter": [{
 		"_name": "PartyRef",
 		"_value": "Party Reference"
-	},
+	}],
 	"explain": "Disbands the given Party",
 	"return": "1 on success",
 	"error": [

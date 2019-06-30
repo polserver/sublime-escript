@@ -48,10 +48,10 @@
 	"mysql_fetch_row":
 	{
 		"prototype": "mysql_fetch_row(result)",
-		"parameter": {
+		"parameter": [{
 			"_name": "result",
 			"_value": "Result object"
-		},
+		}],
 		"explain": "Fetches next row from Result.",
 		"return": "Array on success",
 		"_name": "mysql_fetch_row"
@@ -59,10 +59,10 @@
 	"mysql_affected_rows":
 	{
 		"prototype": "mysql_affected_rows(result)",
-		"parameter": {
+		"parameter": [{
 			"_name": "result",
 			"_value": "Result object"
-		},
+		}],
 		"explain": "Returns number of rows affected by last query.",
 		"return": "Integer on success",
 		"_name": "mysql_affected_rows"
@@ -70,10 +70,10 @@
 	"mysql_num_fields":
 	{
 		"prototype": "mysql_num_fields(result)",
-		"parameter": {
+		"parameter": [{
 			"_name": "result",
 			"_value": "Result object"
-		},
+		}],
 		"explain": "Returns number of fields in result.",
 		"return": "Integer on success",
 		"_name": "mysql_num_fields"
@@ -81,10 +81,10 @@
 	"mysql_num_rows":
 	{
 		"prototype": "mysql_num_rows(result)",
-		"parameter": {
+		"parameter": [{
 			"_name": "result",
 			"_value": "Result object"
-		},
+		}],
 		"explain": "Returns number of rows in result.",
 		"return": "Integer on success",
 		"_name": "mysql_num_rows"
@@ -126,10 +126,10 @@
 	"mysql_close":
 	{
 		"prototype": "mysql_close(connection)",
-		"parameter": {
+		"parameter": [{
 			"_name": "connection",
 			"_value": "Connection object"
-		},
+		}],
 		"explain": "Closed the connection to DBMS.",
 		"return": "1 on success",
 		"_name": "mysql_close"

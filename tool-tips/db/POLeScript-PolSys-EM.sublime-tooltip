@@ -27,10 +27,10 @@
 	"SetSysTrayPopupText":
 {
 	"prototype": "SetSysTrayPopupText(text)",
-	"parameter": {
+	"parameter": [{
 		"_name": "text",
 		"_value": "String tooltip text for systray icon"
-	},
+	}],
 	"explain": "Sets the systray icon's tooltip text (win32 only)",
 	"return": "1",
 	"_name": "SetSysTrayPopupText"
@@ -38,10 +38,10 @@
 	"GetItemDescriptor":
 {
 	"prototype": "GetItemDescriptor(objtype)",
-	"parameter": {
+	"parameter": [{
 		"_name": "objtype",
 		"_value": "int Objtype OR string ObjtypeName"
-	},
+	}],
 	"explain": [
 		"Returns a struct of all itemdesc.cfg properties for the objtype.",
 		"The keys are the property names, i.e. \"Color\", \"Desc\", etc. The values can be String, Integer, Real. The exceptions are \"CProps\" and \"StackingIgnoresCProps\". \"CProps\" is a dictionary where the CProp name is the key, and the value can be any packable type (i.e. array, struct, etc.). \"StackingIgnoresCProps\" is an array of strings.",
@@ -87,10 +87,10 @@
 	"Realms":
 {
 	"prototype": "Realms(realm:=\"\")",
-	"parameter": {
+	"parameter": [{
 		"_name": "realm",
 		"_value": "String"
-	},
+	}],
 	"explain": [
 		"Returns a dictionary of structs or a single struct.",
 		"If a single case-sensitive realm name is passed, will return the information for only that realm.",
@@ -105,10 +105,10 @@
 	"GetCmdLevelName":
 {
 	"prototype": "GetCmdLevelName(number)",
-	"parameter": {
+	"parameter": [{
 		"_name": "number",
 		"_value": "Integer"
-	},
+	}],
 	"explain": "Will get a command level's name.",
 	"return": "CmdLevelName or Error",
 	"error": "\"Invalid parameter type.\"",
@@ -118,10 +118,10 @@
 	"GetCmdLevelNumber":
 {
 	"prototype": "GetCmdLevelNumber(name)",
-	"parameter": {
+	"parameter": [{
 		"_name": "name",
 		"_value": "String"
-	},
+	}],
 	"explain": "Will get the numeric value of a command level.",
 	"return": "CmdLevel or Error",
 	"error": [
@@ -134,10 +134,10 @@
 	"IncRevision":
 {
 	"prototype": "IncRevision( object )",
-	"parameter": {
+	"parameter": [{
 		"_name": "object",
 		"_value": "UObject Ref"
-	},
+	}],
 	"explain": "Increases the internal \"Revision\" number of an UObject. Used to manually increase this number for scripted changes to things such as mob.race and such where core does not auto increase it.",
 	"return": "1 on success",
 	"error": "\"Invalid parameter type.\"",
@@ -168,10 +168,10 @@
 	"GetPackageByName":
 {
 	"prototype": "GetPackageByName(name)",
-	"parameter": {
+	"parameter": [{
 		"_name": "name",
 		"_value": "String"
-	},
+	}],
 	"explain": "Will return a package reference.",
 	"return": "PackageRef or Error",
 	"error": [
@@ -234,10 +234,10 @@
 	"DeleteRealm":
 {
 	"prototype": "DeleteRealm(realm)",
-	"parameter": {
+	"parameter": [{
 		"_name": "realm",
 		"_value": "String - case-sensitive name of the realm"
-	},
+	}],
 	"explain": "Deletes a ShadowRealm, only if the realm is \"clean\"",
 	"return": "1",
 	"error": [
@@ -251,10 +251,10 @@
 	"MD5Encrypt":
 {
 	"prototype": "MD5Encrypt(str)",
-	"parameter": {
+	"parameter": [{
 		"_name": "str",
 		"_value": "String"
-	},
+	}],
 	"explain": "Encrypts given string.",
 	"return": "MD5 hash string on success",
 	"error": [

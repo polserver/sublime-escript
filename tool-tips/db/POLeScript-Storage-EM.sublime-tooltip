@@ -11,10 +11,10 @@
 	"FindStorageArea":
 {
 	"prototype": "FindStorageArea( areaname )",
-	"parameter": {
+	"parameter": [{
 		"_name": "areaname",
 		"_value": "String"
-	},
+	}],
 	"explain": "Gets a reference to the storage area named \"areaname\"",
 	"return": "Storage Area reference on success",
 	"error": "none (returns 0 on invalid parameter or area not found)",
@@ -45,10 +45,10 @@
 	"CreateStorageArea":
 {
 	"prototype": "CreateStorageArea( areaname )",
-	"parameter": {
+	"parameter": [{
 		"_name": "areaname",
 		"_value": "String"
-	},
+	}],
 	"explain": "Create a new storage area with name \"areaname\".",
 	"return": "Storage Area reference on success",
 	"error": "Errors: none (returns 0 on invalid parameter)",

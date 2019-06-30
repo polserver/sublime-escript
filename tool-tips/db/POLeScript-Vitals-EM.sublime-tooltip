@@ -171,10 +171,10 @@
 	"GetVitalName":
 {
 	"prototype": "GetVitalName( alias_name )",
-	"parameter": {
+	"parameter": [{
 		"_name": "alias_name",
 		"_value": "String"
-	},
+	}],
 	"explain": "Returns the real vital name from an alias",
 	"return": "String",
 	"error": "\"Invalid parameter type\"",

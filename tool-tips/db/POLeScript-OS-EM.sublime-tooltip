@@ -3,10 +3,10 @@
   "GetProcess":
 	{
 	"prototype": "GetProcess(pid := 0)",
-	"parameter": {
+	"parameter": [{
 		"_name": "pid",
 		"_value": "Integer process ID of a script (optional)"
-	},
+	}],
 	"explain": [
 		"Gets a script process object for the given script's PID.",
 		"If no PID is supplied uses PID of parent script."
@@ -29,10 +29,10 @@
 	"Unload_Scripts":
 {
 	"prototype": "Unload_Scripts(scriptname := \"\")",
-	"parameter": {
+	"parameter": [{
 		"_name": "scriptname",
 		"_value": "String filename of script without extension (optional)"
-	},
+	}],
 	"explain": [
 		"unload scripts from the script cache (they will be reloaded from disk on demand) currently running scripts will continue as normal.",
 		"Passing \"\" will unload all scripts."
@@ -57,10 +57,8 @@
 	],
 	"explain": [
 		"Sets one or more options on or off for this script",
-		{
-			"code": "const SCRIPTOPT_NO_INTERRUPT := 1;      // if 1, script runs until it sleeps\nconst SCRIPTOPT_DEBUG        := 2;      // if 1, prints any debug info included\nconst SCRIPTOPT_NO_RUNAWAY   := 3;      // if 1, doesn't warn about runaway conditions\nconst SCRIPTOPT_CAN_ACCESS_OFFLINE_MOBILES := 4;",
-			"__text": "Constants for this function:"
-		},
+			"code: const SCRIPTOPT_NO_INTERRUPT := 1;      // if 1, script runs until it sleeps\nconst SCRIPTOPT_DEBUG        := 2;      // if 1, prints any debug info included\nconst SCRIPTOPT_NO_RUNAWAY   := 3;      // if 1, doesn't warn about runaway conditions\nconst SCRIPTOPT_CAN_ACCESS_OFFLINE_MOBILES := 4;",
+			"Constants for this function:",
 		"set_script_option(SCRIPTOPT_NO_INTERRUPT,1) is the same as set_critical(1)",
 		"set_script_option(SCRIPTOPT_DEBUG,1) is the same as set_debug(1)"
 	],
@@ -74,10 +72,10 @@
 	"Sleep":
 {
 	"prototype": "Sleep( num_seconds )",
-	"parameter": {
+	"parameter": [{
 		"_name": "num_seconds",
 		"_value": "Integer"
-	},
+	}],
 	"explain": [
 		"Puts the current script to sleep for num_seconds. No further instructions in this script will be processed in this script until the time expires.",
 		"DO NOT USE IN A CRITICAL BLOCK! Your server will freeze for the duration!",
@@ -89,10 +87,10 @@
 	"Sleepms":
 {
 	"prototype": "Sleepms( num_milliseconds )",
-	"parameter": {
+	"parameter": [{
 		"_name": "num_milliseconds",
 		"_value": "Integer"
-	},
+	}],
 	"explain": [
 		"Puts the current script to sleep for num_milliseconds. No further instructions in this script will be processed in this script until the time expires.",
 		"DO NOT USE IN A CRITICAL BLOCK! Your server will freeze for the duration!",
@@ -105,10 +103,10 @@
 	"Wait_For_Event":
 {
 	"prototype": "Wait_For_Event( num_seconds_timeout )",
-	"parameter": {
+	"parameter": [{
 		"_name": "num_seconds_timeout",
 		"_value": "Integer"
-	},
+	}],
 	"explain": [
 		"The primary access to a script's event queue. If there is an event waiting, the function immediately returns with the event (could be a string, int, struct, etc).",
 		"If no event is waiting, the script sleeps for num_seconds_timeout or until a new event arrives. If the timeout is reached, the function returns 0.",
@@ -127,10 +125,10 @@
 	"Set_Priority":
 {
 	"prototype": "Set_Priority( priority )",
-	"parameter": {
+	"parameter": [{
 		"_name": "priority",
 		"_value": "Integer 1..255"
-	},
+	}],
 	"explain": [
 		"the priority of a script is how many instructions it executes before switching to another script.",
 		"default script priority is 1."
@@ -142,10 +140,10 @@
 	"Set_Critical":
 {
 	"prototype": "Set_Critical( critical )",
-	"parameter": {
+	"parameter": [{
 		"_name": "critical",
 		"_value": "Boolean (0/1)"
-	},
+	}],
 	"explain": [
 		"critical scripts run if they are not blocked, without interruption.",
 		"An infinite loop in a critical script will hang the server",
@@ -159,10 +157,10 @@
 	"Set_Debug":
 {
 	"prototype": "Set_Debug( debug )",
-	"parameter": {
+	"parameter": [{
 		"_name": "debug",
 		"_value": "Boolean (0/1)"
-	},
+	}],
 	"explain": [
 		"if debug=1, and the script was compiled with 'ecompile -i [script].src', each script source line will be printed as it is executed.",
 		"if debug=0, disables this output."
@@ -285,10 +283,10 @@
 	"SysLog":
 {
 	"prototype": "SysLog( text )",
-	"parameter": {
+	"parameter": [{
 		"_name": "text",
 		"_value": "String"
-	},
+	}],
 	"explain": "write text to the console, and to the log file includes context (calling script name)",
 	"return": "1 on success",
 	"_name": "SysLog"
@@ -321,10 +319,10 @@
 	"Set_Event_Queue_Size":
 {
 	"prototype": "Set_Event_Queue_Size(size)",
-	"parameter": {
+	"parameter": [{
 		"_name": "size",
 		"_value": "Integer new size"
-	},
+	}],
 	"explain": [
 		"Changes the maximum number of events the current script will keep in the queue (additional events will be discarded).",
 		"If not called, the default size is 20 events."

@@ -3,10 +3,10 @@
   "RandomInt":
 	{
 	"prototype": "RandomInt(below_this_number)",
-	"parameter": {
+	"parameter": [{
 		"_name": "below_this_number",
 		"_value": "Integer"
-	},
+	}],
 	"explain": "Returns a random integer below the passed parameter and greater or equal to zero.",
 	"return": "Integer R such that 0 less or equal to R less than below_this_number",
 	"error": "\"RandomInt() expects a positive integer\"",
@@ -33,10 +33,10 @@
 	"RandomFloat":
 {
 	"prototype": "RandomFloat(below_this_float)",
-	"parameter": {
+	"parameter": [{
 		"_name": "below_this_float",
 		"_value": "Real"
-	},
+	}],
 	"explain": "Returns a random real below the passed parameter and greater or equal to zero.",
 	"return": "Real R such that 0 less or equal to R less than below_this_number",
 	"error": "\"RandomFloat() expects a Real parameter\"",
@@ -45,10 +45,10 @@
 	"RandomDiceRoll":
 {
 	"prototype": "RandomDiceRoll(dice_string)",
-	"parameter": {
+	"parameter": [{
 		"_name": "dice_string",
 		"_value": "String"
-	},
+	}],
 	"explain": [
 		"Returns a random number according to the passed die roll string. This is standard NdS+X format. N=number of dies to roll, S=number of sides per die, X=integer to add(or subtract) after roll.",
 		{

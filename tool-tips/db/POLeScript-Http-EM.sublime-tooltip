@@ -3,10 +3,10 @@
   "WriteHtml":
 	{
 		"prototype": "WriteHtml( html )",
-		"parameter": {
+		"parameter": [{
 			"_name": "html",
 			"_value": "String"
-		},
+		}],
 		"explain": "Writes a line of HTML to the \"virtual webpage\" that will be sent to the connecting browser and appends a new-line.",
 		"return": "1 always",
 		"error": [
@@ -18,10 +18,10 @@
 	"WriteHtmlRaw":
 	{
 		"prototype": "WriteHtmlRaw( html )",
-		"parameter": {
+		"parameter": [{
 			"_name": "html",
 			"_value": "String"
-		},
+		}],
 		"explain": "Writes a line of HTML to the \"virtual webpage\" that will be sent to the connecting browser, does NOT append a new-line.",
 		"return": "1 always",
 		"error": [
@@ -33,10 +33,10 @@
 	"QueryParam":
 	{
 		"prototype": "QueryParam( param )",
-		"parameter": {
+		"parameter": [{
 			"_name": "param",
 			"_value": "String"
-		},
+		}],
 		"explain": [
 			"Query's the accessed URL for any embedded parameters. (see your favorite HTML docs for parameter embedding! :) )",
 			{

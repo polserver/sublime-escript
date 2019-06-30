@@ -14,10 +14,10 @@
 	"FindGuild":
 	{
 		"prototype": "FindGuild( guildid )",
-		"parameter": {
+		"parameter": [{
 			"_name": "guildid",
 			"_value": "integer"
-		},
+		}],
 		"explain": "Gets a Guild Reference for a given Guild ID number",
 		"return": "Guild Reference on success",
 		"error": [
@@ -38,10 +38,10 @@
 	"DestroyGuild":
 	{
 		"prototype": "DestroyGuild( guild )",
-		"parameter": {
+		"parameter": [{
 			"_name": "guild",
 			"_value": "Guild Reference"
-		},
+		}],
 		"explain": [
 			"Destroys an empty guild.",
 			"Notes: Must first empty the guild of members, allies, and enemies (see guildref methods)"

@@ -55,10 +55,10 @@
 	"Move":
 {
 	"prototype": "Move( direction )",
-	"parameter": {
+	"parameter": [{
 		"_name": "direction",
 		"_value": "Direction String, Facing Integer, or Bounding Box"
-	},
+	}],
 	"explain": [
 		"A Direction String is one of: N, S, E, W, NW, NE, SW, SE",
 		"A Facing Integer is 0 through 7 where 0 is North, 1 is NorthEast, etc.",
@@ -72,10 +72,10 @@
 	"WalkToward":
 {
 	"prototype": "WalkToward( object )",
-	"parameter": {
+	"parameter": [{
 		"_name": "object",
 		"_value": "UObject"
-	},
+	}],
 	"explain": [
 		"Walk toward object one tile. Puts the script to sleep for a period of time proportional to the NPC's run_speed (or dexterity if not defined).",
 		"Note also, walking in range of your opponent may cause you to attack.",
@@ -97,10 +97,10 @@
 	"WalkAwayFrom":
 {
 	"prototype": "WalkAwayFrom( object )",
-	"parameter": {
+	"parameter": [{
 		"_name": "object",
 		"_value": "UObject"
-	},
+	}],
 	"explain": [
 		"Walk away from object one tile. Puts the script to sleep for a period of time proportional to the NPC's run_speed (or dexterity if not defined).",
 		"Note also, walking in range of your opponent may cause you to attack.",
@@ -122,10 +122,10 @@
 	"RunToward":
 {
 	"prototype": "RunToward( object )",
-	"parameter": {
+	"parameter": [{
 		"_name": "object",
 		"_value": "UObject"
-	},
+	}],
 	"explain": [
 		"Runs toward object one tile. Puts the script to sleep for a period of time proportional to the NPC's run_speed (or dexterity if not defined).",
 		"Note also, walking in range of your opponent may cause you to attack.",
@@ -147,10 +147,10 @@
 	"RunAwayFrom":
 {
 	"prototype": "RunAwayFrom( object )",
-	"parameter": {
+	"parameter": [{
 		"_name": "object",
 		"_value": "UObject"
-	},
+	}],
 	"explain": [
 		"Runs away from object one tile. Puts the script to sleep for a period of time proportional to the NPC's run_speed (or dexterity if not defined).",
 		"Note also, walking in range of your opponent may cause you to attack.",
@@ -410,10 +410,10 @@
 	"SetOpponent":
 {
 	"prototype": "SetOpponent( character )",
-	"parameter": {
+	"parameter": [{
 		"_name": "character",
 		"_value": "CharacterRef"
-	},
+	}],
 	"explain": [
 		"Set your opponent.  If you are in range (or are carrying a projectile weapon and have LOS), you will attack. If a player character is connected, the NPC will highlight.",
 		"Implicitly sets war mode.",
@@ -429,10 +429,10 @@
 	"SetWarMode":
 {
 	"prototype": "SetWarMode( warmode )",
-	"parameter": {
+	"parameter": [{
 		"_name": "warmode",
 		"_value": "Integer 1/0"
-	},
+	}],
 	"explain": [
 		"Usually used to leave warmode, but can be used to enter warmode independently of setting an opponent.",
 		"Setting war mode to 0 clears your opponent."
@@ -518,10 +518,10 @@
 	"GetProperty":
 {
 	"prototype": "GetProperty( propertyname )",
-	"parameter": {
+	"parameter": [{
 		"_name": "propertyname",
 		"_value": "String"
-	},
+	}],
 	"explain": "Deprecated. Equivalent to GetObjProperty( Self(), propertyname )",
 	"return": "An unpacked object. See GetObjProperty in UO.EM",
 	"error": [
@@ -553,10 +553,10 @@
 	"MakeBoundingBox":
 {
 	"prototype": "MakeBoundingBox( areastring )",
-	"parameter": {
+	"parameter": [{
 		"_name": "areastring",
 		"_value": "String, see explanation"
-	},
+	}],
 	"explain": [
 		"Make a bounding box from an area string.  An area string is a number of 'x1 y1 x2 y2' world coordinate entries.",
 		{
@@ -589,10 +589,10 @@
 	"CanMove":
 {
 	"prototype": "CanMove( direction )",
-	"parameter": {
+	"parameter": [{
 		"_name": "direction",
 		"_value": "String, one of N, S, E, W, NW, NE, SW, SE"
-	},
+	}],
 	"explain": "Given current position and direction, would it be possible to move there?",
 	"return": "0 on invalid parameter, or illegal move. 1 on legal move",
 	"related": "NPC",

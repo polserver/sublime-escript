@@ -3,10 +3,10 @@
   "Sin":
 	{
 		"prototype": "Sin(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real, in radians"
-		},
+		}],
 		"explain": "Computes the sine of x",
 		"return": "Real number",
 		"error": "\"Invalid parameter type\"",
@@ -15,10 +15,10 @@
 	"Cos":
 	{
 		"prototype": "Cos(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real, in radians"
-		},
+		}],
 		"explain": "Computes the cosine of x",
 		"return": "Real number",
 		"error": "\"Invalid parameter type\"",
@@ -27,10 +27,10 @@
 	"Tan":
 	{
 		"prototype": "Tan(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real, in radians"
-		},
+		}],
 		"explain": "Computes the tangent of x",
 		"return": "Real number",
 		"error": "\"Invalid parameter type\"",
@@ -39,10 +39,10 @@
 	"ASin":
 	{
 		"prototype": "ASin(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real, in radians"
-		},
+		}],
 		"explain": "Computes the arcsine of x",
 		"return": "Real number in radians",
 		"error": "\"Invalid parameter type\"",
@@ -51,10 +51,10 @@
 	"ACos":
 	{
 		"prototype": "ACos(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real, in radians"
-		},
+		}],
 		"explain": "Computes the arccosine of x",
 		"return": "Real number in radians",
 		"error": "\"Invalid parameter type\"",
@@ -63,10 +63,10 @@
 	"ATan":
 	{
 		"prototype": "ATan(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real, in radians"
-		},
+		}],
 		"explain": "Computes the arctangent of x",
 		"return": "Real number in radians",
 		"error": "\"Invalid parameter type\"",
@@ -75,10 +75,10 @@
 	"RadToDeg":
 	{
 		"prototype": "RadToDeg( radians )",
-		"parameter": {
+		"parameter": [{
 			"_name": "radians",
 			"_value": "Real, in radians"
-		},
+		}],
 		"explain": "Converts the radian parameter to degrees",
 		"return": "Real number in degrees",
 		"error": "\"Invalid parameter type\"",
@@ -87,10 +87,10 @@
 	"DegToRad":
 	{
 		"prototype": "DegToRad( degrees )",
-		"parameter": {
+		"parameter": [{
 			"_name": "degrees",
 			"_value": "Real, in degrees"
-		},
+		}],
 		"explain": "Converts the degrees parameter to radians",
 		"return": "Real number in radians",
 		"error": "\"Invalid parameter type\"",
@@ -117,10 +117,10 @@
 	"Sqrt":
 	{
 		"prototype": "Sqrt(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real"
-		},
+		}],
 		"explain": "Computes the square root of x",
 		"return": "Real number",
 		"error": "\"Invalid parameter type\"",
@@ -147,10 +147,10 @@
 	"Abs":
 	{
 		"prototype": "Abs(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real or Integer"
-		},
+		}],
 		"explain": "Computes the absolute value of x",
 		"return": "Real number",
 		"error": "\"Invalid parameter type\"",
@@ -159,10 +159,10 @@
 	"Log10":
 	{
 		"prototype": "Log10(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real"
-		},
+		}],
 		"explain": "Computes log(base 10) of x",
 		"return": "Real number",
 		"error": "\"Invalid parameter type\"",
@@ -171,10 +171,10 @@
 	"LogE":
 	{
 		"prototype": "LogE(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real"
-		},
+		}],
 		"explain": "Computes the natural log of x",
 		"return": "Real number",
 		"error": "\"Invalid parameter type\"",
@@ -183,10 +183,10 @@
 	"Ceil":
 	{
 		"prototype": "Ceil(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real"
-		},
+		}],
 		"explain": "Computes the ceiling of x",
 		"return": "Real that is smallest integer >= x",
 		"error": "\"Invalid parameter type\"",
@@ -195,10 +195,10 @@
 	"Floor":
 	{
 		"prototype": "Floor(x)",
-		"parameter": {
+		"parameter": [{
 			"_name": "x",
 			"_value": "Real"
-		},
+		}],
 		"explain": "Computes the floor of x",
 		"return": "Real that is largest integer <= x",
 		"error": "\"Invalid parameter type\"",

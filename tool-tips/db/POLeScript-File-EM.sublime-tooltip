@@ -3,10 +3,10 @@
   "FileExists":
   {
 				"prototype": "FileExists( filename )",
-				"parameter": {
+				"parameter": [{
 					"_name": "filename",
 					"_value": "string"
-				},
+				}],
 				"explain": "Checks for the existence of a file based on Filename parameter.",
 				"return": "1 on success",
 				"error": [
@@ -20,10 +20,10 @@
 			"ReadFile":
 			{
 				"prototype": "ReadFile( filename )",
-				"parameter": {
+				"parameter": [{
 					"_name": "filename",
 					"_value": "string"
-				},
+				}],
 				"explain": [
 					"Reads a text file, returning the contents as an array of strings, removing newlines.",
 					"By default, no package has any file access rights. To grant access, see config/fileaccess.cfg"
@@ -179,10 +179,10 @@
 			"CreateDirectory":
 			{
 				"prototype": "CreateDirectory( dirname )",
-				"parameter": {
+				"parameter": [{
 					"_name": "dirname",
 					"_value": "string"
-				},
+				}],
 				"explain": "Creates directory",
 				"return": "1 or error",
 				"error": [
@@ -244,10 +244,10 @@
 			"OpenXMLFile":
 			{
 				"prototype": "OpenXMLFile( filename )",
-				"parameter": {
+				"parameter": [{
 					"_name": "filename",
 					"_value": "string"
-				},
+				}],
 				"explain": [
 					"TinyXML based xml reading/writing.",
 					"opens given filename and returns XMLFile object, fileaccess.cfg is checked"
