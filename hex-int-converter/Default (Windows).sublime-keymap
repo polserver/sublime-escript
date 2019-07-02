@@ -1,0 +1,5 @@
+[
+    {
+        "keys": ["alt+shift+c"], "command": "hex_int_converter"
+    }
+]

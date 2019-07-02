@@ -1,0 +1,18 @@
+[
+    {
+        "caption": "Convert to HEX",
+        "mnemonic": "C",
+        "command": "convert_int",
+        "args":{
+            "scope_selector":"constant.numeric.integer.polscript"
+        }
+    },
+    {
+        "caption": "Convert to INT",
+        "mnemonic": "C",
+        "command": "convert_hex",
+        "args":{
+            "scope_selector":"constant.numeric.hex.polscript"
+        }
+    },
+]

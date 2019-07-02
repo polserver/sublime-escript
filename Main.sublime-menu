@@ -7,8 +7,12 @@
             {
                 "caption": "POL Server Settings",
                 "mnemonic": "P",
-                "children": 
+                "children":
                 [
+                    {
+                        "command": "hex_int_converter",
+                        "caption": "HEX <-> INT"
+                    },
                     {
                         "caption": "Autocomplete",
                         "children":
@@ -30,8 +34,8 @@
                         ]
                     },
                     {
-                        "caption": "ToolTip", 
-                        "children": 
+                        "caption": "ToolTip",
+                        "children":
                         [
                             {
                                 "command": "open_file", "args":

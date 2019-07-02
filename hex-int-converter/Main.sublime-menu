@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Edit",
+        "mnemonic": "E",
+        "id": "edit",
+        "children": [
+            { "caption": "-", "id": "clipboard" },
+            { "caption": "-" },
+            {
+                "caption": "Numeric",
+                "mnemonic": "N",
+                "children":
+                [
+                    {
+                        "command": "hex_int_converter",
+                        "caption": "HEX <-> INT"
+                    }
+                ]
+            }
+        ]
+    }
+]
