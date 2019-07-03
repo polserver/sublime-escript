@@ -17,7 +17,7 @@
   // `true` means enable it.
   // `false` means disable it.
   "completion_active_list": {
-    
+
 	// ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-core-functions.sublime-settings
     "POL-core-functions":true,
 
@@ -26,15 +26,18 @@
 
 	// ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-config-files.sublime-settings
     "POL-config-files":true,
-    
-  // ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-config-keywords.sublime-settings
+
+  // ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-core-keywords.sublime-settings
     "POL-core-keywords":true,
-    
-  // ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-config-members.sublime-settings
+
+  // ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-core-members.sublime-settings
     "POL-core-members":true,
-    
-  // ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-config-methods.sublime-settings
-    "POL-core-methods":true
+
+  // ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-core-methods.sublime-settings
+    "POL-core-methods":true,
+
+  // ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sbc-api-POL-core-constants.sublime-settings
+    "POL-core-constants":true
 
   }
 }
