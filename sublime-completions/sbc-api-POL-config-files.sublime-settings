@@ -332,6 +332,31 @@
         ["EnergyDamage\tproperty", "EnergyDamage" ],
         ["PoisonDamage\tproperty", "PoisonDamage" ],
         ["PhysicalDamage\tproperty", "PhysicalDamage" ],
+        ["LowerReagentCost\tproperty", "LowerReagentCost" ],
+        ["SpellDamageIncrease\tproperty", "SpellDamageIncrease" ],
+        ["FasterCasting\tproperty", "FasterCasting" ],
+        ["FasterCastRecovery\tproperty", "FasterCastRecovery" ],
+        ["DefenceIncrease\tproperty", "DefenceIncrease" ],
+        ["DefenceIncreaseCap\tproperty", "DefenceIncreaseCap" ],
+        ["LowerManaCost\tproperty", "LowerManaCost" ],
+        ["FireResistCap\tproperty", "FireResistCap" ],
+        ["ColdResistCap\tproperty", "ColdResistCap" ],
+        ["EnergyResistCap\tproperty", "EnergyResistCap" ],
+        ["PhysicalResistCap\tproperty", "PhysicalResistCap" ],
+        ["PoisonResistCap\tproperty", "PoisonResistCap" ],
+        ["Luck\tproperty", "Luck" ],
+        ["DefenceIncreaseMod\tproperty", "DefenceIncreaseMod" ],
+        ["DefenceIncreaseCapMod\tproperty", "DefenceIncreaseCapMod" ],
+        ["LowerManaCostMod\tproperty", "LowerManaCostMod" ],
+        ["FireResistCapMod\tproperty", "FireResistCapMod" ],
+        ["ColdResistCapMod\tproperty", "ColdResistCapMod" ],
+        ["EnergyResistCapMod\tproperty", "EnergyResistCapMod" ],
+        ["PhysicalResistCapMod\tproperty", "PhysicalResistCapMod" ],
+        ["PoisonResistCapMod\tproperty", "PoisonResistCapMod" ],
+        ["SpellDamageIncreaseMod\tproperty", "SpellDamageIncreaseMod" ],
+        ["FasterCastingMod\tproperty", "FasterCastingMod" ],
+        ["FasterCastRecoveryMod\tproperty", "FasterCastRecoveryMod" ],
+        ["LuckMod\tproperty", "LuckMod" ],
         ["StackLimit\tproperty", "StackLimit" ],
         ["NoDrop\tproperty", "NoDrop" ],
         ["Gump\tproperty", "Gump" ],
@@ -513,6 +538,6 @@
 
         // Custom Properties
         ["CProp\tproperty", "CProp\t\t\t$1\t\t${2:s}" ]
-        
+
     ]
 }
