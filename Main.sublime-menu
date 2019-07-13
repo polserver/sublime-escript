@@ -20,14 +20,14 @@
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/PolServer/Autocomplete.sublime-settings"
+                                    "file": "${packages}/eScript Syntax/Autocomplete.sublime-settings"
                                 },
                                 "caption": "Settings"
                             },
                             {
                                 "command": "open_dir",
                                 "args": {
-                                    "dir": "${packages}/PolServer/sublime-completions"
+                                    "dir": "${packages}/eScript Syntax/sublime-completions"
                                 },
                                 "caption": "Completion Files"
                             }
@@ -40,14 +40,14 @@
                             {
                                 "command": "open_file", "args":
                                 {
-                                    "file": "${packages}/PolServer/Tooltips.sublime-settings"
+                                    "file": "${packages}/eScript Syntax/Tooltips.sublime-settings"
                                 },
                                 "caption": "Settings"
                             },
                             {
                                 "command": "open_dir",
                                 "args": {
-                                    "dir": "${packages}/PolServer/ToolTip-Helper/db"
+                                    "dir": "${packages}/eScript Syntax/tool-tips/db"
                                 },
                                 "caption": "Tooltip Definition Files"
                             },
