@@ -4,7 +4,7 @@ import webbrowser
 import datetime
 import logging
 import hashlib
-import json 
+import json
 import time
 import re
 import os
@@ -23,7 +23,7 @@ class Utilities():
 
         if keyorder:
             try:
-                # the output of sorted function is an ordered list of tuples 
+                # the output of sorted function is an ordered list of tuples
                 ordered_result = sorted(json.items(), key=lambda i:keyorder.index(i[0]))
                 # print("ordered_result: " + str(ordered_result))
             except Exception as e:
@@ -40,7 +40,7 @@ class Utilities():
             row = location[0]
             col = location[1]
             # message += '<br><a style="color: white;" href=\"%s\">Go To Document</a>' % (file_name + '$$$' + str(row) + ',' + str(col))
-            message += '<br><a href=\"%s\" style=\"%s\">Go To Document</a>' % ((file_name + '$$$' + str(row) + ',' + str(col)), style['link'])  
+            message += '<br><a href=\"%s\" style=\"%s\">Go To Document</a>' % ((file_name + '$$$' + str(row) + ',' + str(col)), style['link'])
         return message
 
     @staticmethod
@@ -57,7 +57,7 @@ class Utilities():
                         value = Utilities.build_params_list(value)
                 elif isinstance(value, list):
                     str_val = ""
-                    
+
                     for item in value:
                         str_val += item + '<br>'
                     value = str_val
@@ -88,21 +88,21 @@ class Utilities():
         separator = 100*'-'
         currnet_date_time = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
         formated_msg = separator + '\n\t\t\t\t\t\t' + currnet_date_time + '\n' + separator + '\n' + msg + '\n\n'
-        relative_path = os.path.join(os.path.join(sublime.packages_path(), 'eScript Syntax\\tool-tips'), 'logger.txt')
+        relative_path = os.path.join(os.path.join(sublime.packages_path(), 'Logs\\eScript Syntax\\tool-tips'), 'logger.txt')
         try:
             with open(relative_path, 'w+') as f:
                 f.write(formated_msg)
                 f.close()
         except Exception as e:
             print(e)
-            
+
 class OpenSublimeTooltipFilesCommand(sublime_plugin.WindowCommand):
     def __init__(self, view):
         self.files = []
 
     def run(self):
         # set root directory path
-        relative_path = os.path.join(os.path.join(sublime.packages_path(), 'eScript Syntax\\tool-tips'), 'db')
+        relative_path = 'Packages\\eScript Syntax\\tool-tips\\db'
         # only file names
         decorated_files_names = [f for f in os.listdir(relative_path) if os.path.isfile(os.path.join(relative_path, f))]
         # full path files
@@ -141,7 +141,7 @@ class EnterDataCommand(sublime_plugin.WindowCommand):
     def get_name(self, user_input):
         if user_input.strip():
             self.file_name = user_input
-            sublime.active_window().show_input_panel("Enter your link here (optional):", "", self.get_link, None, None)            
+            sublime.active_window().show_input_panel("Enter your link here (optional):", "", self.get_link, None, None)
 
     def get_link(self, user_input):
         if user_input.strip():
@@ -160,7 +160,7 @@ class EnterDataCommand(sublime_plugin.WindowCommand):
             sublime.save_settings(file_settings)
             sublime.status_message("the changes was saved!")
         except Exception as e:
-            sublime.status_message("cannot save the changes")            
+            sublime.status_message("cannot save the changes")
 
 
 class ToolTipHelperCommand(sublime_plugin.TextCommand):
@@ -185,13 +185,13 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
         self.word_point = ()
         self.logger_msg = ""
         # self.__str__()
-        
+
     def __str__(self):
         """ print settings strings """
         print(  "files: "       + str(self.files)       + '\n' +
-                "keyorder: "    + str(self.keyorder)    + '\n' + 
-                "set_timeout: " + str(self.set_timeout) + '\n' + 
-                "has_timeout: " + str(self.has_timeout) + '\n' + 
+                "keyorder: "    + str(self.keyorder)    + '\n' +
+                "set_timeout: " + str(self.set_timeout) + '\n' +
+                "has_timeout: " + str(self.has_timeout) + '\n' +
                 "max_width: "   + str(self.max_width))
 
     # def __del__(self):
@@ -210,23 +210,24 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
             tooltip_files_arr = self.get_tooltip_files(current_scope)
             # do match with user selection and return the result
             results = self.match_selection(sel, tooltip_files_arr, current_scope)
+            print("res:"+str(results))
             for result in results:
-                # get the correct link if there is 
+                # get the correct link if there is
                 link = self.has_link(result)
                 location = ""
                 file_name = ""
                 if 'location' in result:
                     location = result['location']
                     file_name = result['file_name']
-                    html_tooltip = Utilities.result_format(result['json_result'], 
-                                                            self.keyorder, 
+                    html_tooltip = Utilities.result_format(result['json_result'],
+                                                            self.keyorder,
                                                             link,
-                                                            self.style, 
-                                                            location, 
+                                                            self.style,
+                                                            location,
                                                             file_name)
                 else:
-                    html_tooltip = Utilities.result_format(result['json_result'], 
-                                                            self.keyorder, 
+                    html_tooltip = Utilities.result_format(result['json_result'],
+                                                            self.keyorder,
                                                             link,
                                                             self.style)
                 # edit the result in html for tooltip window
@@ -243,8 +244,8 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
                 if self.last_choosen_fun != sel:
                     self.last_index = 0
                     self.last_choosen_fun = sel
-                sublime.active_window().show_quick_panel(names, self.on_done, 
-                                                        sublime.MONOSPACE_FONT, 
+                sublime.active_window().show_quick_panel(names, self.on_done,
+                                                        sublime.MONOSPACE_FONT,
                                                         self.last_index)
             else:
                 print("documentation not exist")
@@ -262,7 +263,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
     def get_file_names(self, results):
         """ get string names for panel """
         names = []
-        count = 0 
+        count = 0
         for name in results:
             count += 1
             path, extension = os.path.splitext(name['file_name'])
@@ -295,10 +296,10 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
             # set timout to 10 seconds, in the end hide the tooltip window
             sublime.set_timeout(lambda:self.hide(), self.set_timeout)
         # open popup window in the current cursor
-        show_popup(self.view, 
-                    search_result, 
+        show_popup(self.view,
+                    search_result,
                     location = self.location,
-                    on_navigate=self.on_navigate, 
+                    on_navigate=self.on_navigate,
                     max_width=self.max_width)
         self.results_arr = []
 
@@ -317,7 +318,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
                 location = arr[1].split(',')
                 row = int(location[0].strip())
                 col = int(location[1].strip())
-                sublime.active_window().open_file("%s:%s:%s" % 
+                sublime.active_window().open_file("%s:%s:%s" %
                         (file_name, row, col),
                         sublime.ENCODED_POSITION)
             except Exception as e:
@@ -353,9 +354,10 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
         else:
             self.logger_msg += 'There is no documentation in dynamic doc\n'
 
-        for file in tooltip_files: 
+        for file in tooltip_files:
             # search the parameter in json file
             json_result = self.search_in_json(sel, file['file_name'])
+            print("jsn:"+str(json_result))
             items = []
             if isinstance(json_result, dict):
                 items.append(json_result)
@@ -429,7 +431,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
         location = {"start": None, "end": None}
         has_location = False
         count = 0
-       
+
         if '</doc>' not in content[row-2]:
                 return False, {}
 
@@ -447,7 +449,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
 
     def fix_broken_path(self, old_path):
         """ in case the path is broken this fun return a fixed file path """
-        old_path[1] += ':' 
+        old_path[1] += ':'
         new_path = ""
         for i in range(1, len(old_path)):
             new_path += old_path[i]
@@ -457,8 +459,9 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
 
     def get_file_content(self, file_name):
         """ read file and get the lines in array """
+        print("res"+file_name)
         try:
-            with open(file_name) as f:
+            with sublime.load_resource(file_name) as f:
                 content = f.readlines()
                 return content
         except Exception as e:
@@ -493,19 +496,19 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
                 except Exception as e:
                     pass
         return dic
-    
+
     def match(self, result):
         """ get the doc match in tuple """
         # regex = r"^#doc#\s*(desc\:(?:\s*\w+\,?)+)\s*((?:params\:(?:\s*\w+\,?)+)?)\s*((?:return\:(?:\s*\w+\,?)+)?)\s*#doc#$"        # regex = r"\s*[~!@#$%^&*?<>]*\s#doc#\s*[~!@#$%^&*?<>]*\s*(description\:(?:[~!@#$%^&*?<>]\s*\w+\,?)+)\s*[~!@#$%^&*?<>]*\s*((?:parameters\:(?:[~!@#$%^&*?<>]\s*\w+\,?)+)?)\s*[~!@#$%^&*?<>]*\s*((?:return\:(?:[~!@#$%^&*?<>]\s*\w+\,?)+)?)\s*[~!@#$%^&*?<>]*\s*#doc#"
         regex = r"((\w+\:\w+\,?)*)"
         try:
             groups = re.match(regex, result.strip()).groups()
-            return groups 
+            return groups
         except Exception as e:
             # print(e)
             self.logger_msg += str(e) + '\n'
             return ()
-        
+
 
     def get_result_in_dic(self, groups):
         """ get json result in dictionary """
@@ -532,7 +535,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
         file_load = sublime.load_settings(file_settings)
         file_load.set("keyorder", self.keyorder)
         sublime.save_settings(file_settings)
-    
+
     def search_in_json(self, search_result, file_path):
         """ find specific result in json file """
         try:
@@ -545,18 +548,18 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
 
     def read_JSON(self, path):
         """ read json file from the given path """
-        with open(path, encoding="utf8") as json_file:
-            try:
-                data = json.load(json_file)
-            except Exception as e:
-                data = {}
-                self.logger_msg += str(e) +'\n'
-            return data
+        print("path:"+path)
+        try:
+            data = json.loads(sublime.load_resource(path))
+        except Exception as e:
+            data = {}
+            self.logger_msg += str(e) +'\n'
+        return data
 
     def get_tooltip_files(self, current_scope):
         """ get all files paths which have the current scope """
         files = self.get_immediate_files()
-        relative_path = os.path.join(os.path.join(sublime.packages_path(), 'eScript Syntax\\tool-tips'), 'db')
+        relative_path = 'Packages\\eScript Syntax\\tool-tips\\db'
         tooltip_files = []
         scope_arr = list(reversed(current_scope.strip().split(' ')))
         self.logger_msg += "Current scope: %s\n" % current_scope
@@ -572,17 +575,17 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
                         file['file_name'] = full_path
                         tooltip_files.append(file)
                         has_files = True
-                    
+
                 if has_files:
                     """ #UNCOMMENT BELOW TO SEE SCOPES IN CONSOLE
                     msg = "files with valid scope: %s\n" % str(tooltip_files)
                     self.logger_msg += msg"""
                     break
             if not has_files:
-                self.logger_msg += 'There is no file with scope from the files list that match to the current scope\n'                
+                self.logger_msg += 'There is no file with scope from the files list that match to the current scope\n'
         # print(tooltip_files)
         return tooltip_files
-        
+
     def get_immediate_files(self):
         """ get the files from settings """
         try:
@@ -604,7 +607,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
         except:
             keyorder = []
         return keyorder
-  
+
     def get_timeout(self):
         """ get timeout from settings """
         try:
@@ -617,16 +620,16 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
     def has_timeout(self):
         """ get timeout condition settings """
         try:
-            value = bool(self.settings.get("has_timeout")) 
-            has_timeout = value if value != None else True 
+            value = bool(self.settings.get("has_timeout"))
+            has_timeout = value if value != None else True
         except:
             has_timeout = True
         return has_timeout
 
     def has_debug(self):
         try:
-            value = bool(self.settings.get("debug")) 
-            has_debug = value if value != None else False 
+            value = bool(self.settings.get("debug"))
+            has_debug = value if value != None else False
         except:
             has_debug = False
         return has_debug
@@ -635,7 +638,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
         """ get width from settings """
         try:
             value = int(self.settings.get("max_width"))
-            max_width = value if value != None and value > 0 else 350 
+            max_width = value if value != None and value > 0 else 350
         except:
             max_width = 350
         return max_width
@@ -664,7 +667,6 @@ def show_popup(view, content, *args, **kwargs):
 
     manager = StyleSheetManager()
     color_scheme = view.settings().get("color_scheme")
-
     style_sheet = manager.get_stylesheet(color_scheme)["content"]
     # print(style_sheet)
     # style_sheet = ".title {color: yellow; text-decoration: underline;}"
@@ -935,7 +937,7 @@ class StackBuilder():
                 variable(\.(parameter|language|other))?)"""
 
         for css_class in in_classes:
-            match = re.search(regex, css_class, re.IGNORECASE + re.VERBOSE) 
+            match = re.search(regex, css_class, re.IGNORECASE + re.VERBOSE)
             if (match):
                 out_classes.append(css_class)
 

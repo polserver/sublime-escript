@@ -11,7 +11,7 @@ class HexIntConverterCommand(sublime_plugin.TextCommand):
 		view.run_command("expand_selection",{"to":"word"})
 
 		#Set selection to first selected only
-		sels = self.view.substr(self.view.line(self.view.sel()[0]))
+		sels = self.view.substr(self.view.word(self.view.sel()[0]))
 
 		#If begining of selection is 0x number must be hex
 		if sels[:2] == "0x":
@@ -36,7 +36,8 @@ class ConvertIntCommand(sublime_plugin.TextCommand):
 
 	def is_visible(self, scope_selector, **kwargs):
 		if self.view.match_selector(self.view.sel()[0].begin(), scope_selector) and scope_selector:
-			return self.view.match_selector(self.view.sel()[0].begin(), scope_selector)
+			return True
+		return False
 
 class ConvertHexCommand(sublime_plugin.TextCommand):
 	def run(self, edit, scope_selector, **kwargs):
@@ -46,11 +47,12 @@ class ConvertHexCommand(sublime_plugin.TextCommand):
 		view.run_command("expand_selection",{"to":"word"})
 
 		#Set selection to first selected only
-		sels = self.view.substr(self.view.line(self.view.sel()[0]))
+		sels = self.view.substr(self.view.word(self.view.sel()[0]))
 
 		#replace with int representation
 		self.view.replace(edit,self.view.sel()[0],str(int(sels, 0)))
 
 	def is_visible(self, scope_selector, **kwargs):
 		if self.view.match_selector(self.view.sel()[0].begin(), scope_selector) and scope_selector:
-			return self.view.match_selector(self.view.sel()[0].begin(), scope_selector)
+			return True
+		return False
