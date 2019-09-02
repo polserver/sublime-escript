@@ -11,6 +11,9 @@
 
 	"trim_trailing_white_space_on_save": true,
 
-    "copy_with_empty_selection": false
+    "copy_with_empty_selection": false,
+
+    //This is used to enforce UTF-8 on files which is supported by the core for unicode support.
+    "default_encoding": "UTF-8"
 
 }
