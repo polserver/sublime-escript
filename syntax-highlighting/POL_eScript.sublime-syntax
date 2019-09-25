@@ -59,6 +59,8 @@ contexts:
       captures:
         1: storage.type.polscript
         2: meta.function.parameters.polscript
+    - match: '(?i)\b(dim|local|global|begin|end)\b'
+      scope: invalid.deprecated.polscript
     - match: '(?i)\b(array|dictionary|struct|error)\b'
       scope: storage.type.polscript
     - match: '(?i)\b(return|exit|in)\b'
@@ -85,10 +87,10 @@ contexts:
     - include: script
 
   param_function:
-    - match: '\,*\s*\b(byref)\b\s*\b(\w*)\b\s*'
+    - match: '\,*\s*\b(byref)*\b\s*\b(\w+)\b\s*'
       captures:
         1: storage.type.polscript
-        2: meta.function.parameters.polscript
+        2: variable.parameter.polscript
     - match: \,
       scope: keyword.control.conditional.polscript
     - match: \)
@@ -365,8 +367,8 @@ contexts:
   # POL SPECIFICS
 
   deprecated_functions:
-    - match: '(?i)\b(GetElemProperty)\b\('
-      scope: invalid.illegal.polscript
+    - match: '(?i)\b(GetElemProperty|Damage|GameStat)\b\('
+      scope: invalid.deprecated.polscript
       push: param_functions
 
   functions:
@@ -389,6 +391,8 @@ contexts:
     - match: '(?i)\.\b(addcharacter|ban|checkpassword|delete|deletecharacter|disable|enable|eraseprop|get_member|getcharacter|getprop|move_char|propnames|set_uo_expansion|setdefaultcmdlevel|setname|setpassword|setprop|split|unban|append|cycle|erase|exists|insert|randomentry|reverse|shrink|size|sort|sorted_insert|transmit|close|flush|getint16|getint32|getint8|getsint16|getsint32|getsint8|getstring|peek|seek|setint16|setint32|setint8|setsint16|setsint32|setsint8|setstring|tell|move_offline_mobiles|addbuff|attack_once|clearaggressorto|clearbuffs|clearlawfullydamagedto|cleargottenitem|compareversion|deaf|delbuff|disableskillsfor|enabled|getcorpse|getgottenitem|kill|privileges|removereportable|setaggressorto|setlawfullydamagedto|setcmdlevel|setcriminal|setfacing|setlightlevel|setmurderer|setparalyzed|setpoisoned|setseason|setswingtimer|setwarmode|spendgold|squelch|createelement|deleteelement|findelement|keys|open|toggle|addallyguild|addenemyguild|addmember|isallyguild|isenemyguild|ismember|removeallyguild|removeenemyguild|removemember|acceptcommit|add_component|addhousepart|cancelediting|erase_component|erasehousepart|setcustom|hasexistingstack|splitstackat|splitstackinto|appendpin|erasepin|getpins|insertpin|setmaster|getint16flipped|getint32flipped|getsize|getunicodestring|getunicodestringflipped|sendareapacket|sendpacket|setint16flipped|setint32flipped|setsize|setunicodestring|setunicodestringflipped|addcandidate|removecandidate|setleader|clear_script_profile_counters|log_profile|set_priority_divide|clear_event_queue|loadsymbols|sendevent|addspell|hasspell|removespell|spells|find|format|join|length|lower|upper|isa|set_member)\b\('
       scope: entity.name.function.constructor.polscript
       push: param_methods
+    - match: '(?i)\.(SetAcctName)\b\('
+      scope: invalid.deprecated.polscript
 
   param_methods:
     - match: \,
@@ -439,10 +443,12 @@ contexts:
       scope: keyword.operator.arithmetic.polscript
     - match: '(?i)(&&|\|\||\bnot\b)'
       scope: keyword.operator.bitwise.polscript
-    - match: '(?i)\b(and|or)\b'
-      scope: invalid.illegal.polscript
     - match: '(==|!=|!|<=|<|>=|>)'
       scope: keyword.operator.logical.polscript
+    - match: '(?i)\b(and|or|=)\b'
+      scope: invalid.deprecated.polscript
+    - match: '(?i)\s(=)\s'
+      scope: invalid.deprecated.polscript
     - match: ;
       scope: keyword.operator.polscript
 

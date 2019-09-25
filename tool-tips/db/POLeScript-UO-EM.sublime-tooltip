@@ -3331,7 +3331,7 @@
     "related": "Character",
     "_name": "RevokePrivilege"
       },
-  "SaveWorldState":  
+  "SaveWorldState":
   {
     "prototype": "SaveWorldState()",
     "explain": "Saves the current world state.",
@@ -3341,8 +3341,8 @@
       "\"pol.cfg has InhibitSaves=1\""
     ],
     "_name": "SaveWorldState"
-    },  
-  "SendSysMessage":  
+    },
+  "SendSysMessage":
   {
     "prototype": "SendSysMessage( character, text, font := _DEFAULT_TEXT_FONT, color := _DEFAULT_TEXT_COLOR )",
     "parameter": [
@@ -3373,9 +3373,10 @@
       "\"Mobile has no active client\""
     ],
     "related": "Character",
-    "_name": "SendSysMessage"
-    },  
-  "SetRegionLightLevel":  
+    "_name": "SendSysMessage",
+    "link": "https://docs.polserver.com/pol100/fullfunc.php?xmlfile=uoem#SendSysMessage"
+    },
+  "SetRegionLightLevel":
   {
     "prototype": "SetRegionLightLevel( regionname, lightlevel )",
     "parameter": [
@@ -3400,8 +3401,8 @@
     ],
     "relatedcfg": "light.cfg",
     "_name": "SetRegionLightLevel"
-    },  
-  "SystemFindObjectBySerial":  
+    },
+  "SystemFindObjectBySerial":
   {
     "prototype": "SystemFindObjectBySerial( serial, sysfind_flags := 0 )",
     "parameter": [
@@ -3416,10 +3417,8 @@
     ],
     "explain": [
       "Searches the world for an item or mobile by serial number. This could be used\n        if the serial number of an object was saved with SetObjProperty, for example.",
-      {
-        "code": "const SYSFIND_SEARCH_OFFLINE_MOBILES := 1;",
-        "__text": "Notes: uo.em constants for flags:"
-      }
+      "const SYSFIND_SEARCH_OFFLINE_MOBILES := 1;",
+        "Notes: uo.em constants for flags:"
     ],
     "return": "A Character Reference, Item Reference, or Multi reference on success.",
     "error": [
@@ -3428,8 +3427,8 @@
       "\"Item not found.\""
     ],
     "_name": "SystemFindObjectBySerial"
-    },  
-  "Target":  
+    },
+  "Target":
   {
     "prototype": "Target( by_character, options := TGTOPT_CHECK_LOS+TGTOPT_NEUTRAL)",
     "parameter": [
@@ -3466,8 +3465,8 @@
       "Character"
     ],
     "_name": "Target"
-    },  
-  "TargetCoordinates":  
+    },
+  "TargetCoordinates":
   {
     "prototype": "TargetCoordinates( by_character )",
     "parameter": [{
@@ -3493,8 +3492,8 @@
     ],
     "related": "Character",
     "_name": "TargetCoordinates"
-    },  
-  "AddMenuItem":  
+    },
+  "AddMenuItem":
   {
     "prototype": "AddMenuItem( menu, objtype, text, color:=0 )",
     "parameter": [
@@ -3523,8 +3522,8 @@
     "return": "1 if the item was added successfully",
     "error": "none (returns 0 on invalid parameters)",
     "_name": "AddMenuItem"
-    },  
-  "CreateMenu":  
+    },
+  "CreateMenu":
   {
     "prototype": "CreateMenu( title )",
     "parameter": [{
@@ -3535,8 +3534,8 @@
     "return": "A dynamic menu reference if the menu was created successfully",
     "error": "none (returns 0 on invalid parameter)",
     "_name": "CreateMenu"
-    },  
-  "SelectMenuItem2":  
+    },
+  "SelectMenuItem2":
   {
     "prototype": "SelectMenuItem2( character, menuname )",
     "parameter": [
@@ -3565,8 +3564,8 @@
     "related": "Character",
     "relatedcfg": "menus.cfg",
     "_name": "SelectMenuItem2"
-    },  
-  "EraseObjProperty":  
+    },
+  "EraseObjProperty":
   {
     "prototype": "EraseObjProperty( object, propname )",
     "parameter": [
@@ -3584,8 +3583,8 @@
     "error": "\"Invalid parameter type\"",
     "related": "UObject",
     "_name": "EraseObjProperty"
-    },  
-  "GetObjProperty":  
+    },
+  "GetObjProperty":
   {
     "prototype": "GetObjProperty( object, property_name )",
     "parameter": [
@@ -3606,8 +3605,8 @@
     ],
     "related": "UObject",
     "_name": "GetObjProperty"
-    },  
-  "SetObjProperty":  
+    },
+  "SetObjProperty":
   {
     "prototype": "SetObjProperty( object, property_name, property_value )",
     "parameter": [
@@ -3629,8 +3628,8 @@
     "error": "\"Invalid parameter type\"",
     "related": "UObject",
     "_name": "SetObjProperty"
-    },  
-  "EraseGlobalProperty":  
+    },
+  "EraseGlobalProperty":
   {
     "prototype": "EraseGlobalProperty( propname )",
     "parameter": [{
@@ -3641,8 +3640,8 @@
     "return": "1 if the property was erased or did not exist.",
     "error": "\"Invalid parameter type\"",
     "_name": "EraseGlobalProperty"
-    },  
-  "GetGlobalProperty":  
+    },
+  "GetGlobalProperty":
   {
     "prototype": "GetGlobalProperty( propname )",
     "parameter": [{
@@ -3656,8 +3655,8 @@
       "\"Property not found\""
     ],
     "_name": "GetGlobalProperty"
-    },  
-  "SetGlobalProperty":  
+    },
+  "SetGlobalProperty":
   {
     "prototype": "SetGlobalProperty( propname, propval )",
     "parameter": [
@@ -3674,15 +3673,15 @@
     "return": "1 on success",
     "error": "\"Invalid parameter type\"",
     "_name": "SetGlobalProperty"
-    },  
-  "GetGlobalPropertyNames":  
+    },
+  "GetGlobalPropertyNames":
   {
     "prototype": "GetGlobalPropertyNames()",
     "explain": "Gets all the global property names. Use GetGlobalProperty(returned_array[i]) to get the property value.",
     "return": "Array of strings",
     "_name": "GetGlobalPropertyNames"
-    },  
-  "PerformAction":  
+    },
+  "PerformAction":
   {
     "prototype": "PerformAction( character, action, framecount := 5, repeatcount := 1, backward := ACTION_DIR_FORWARD, repeatflag := ACTION_NOREPEAT, delay := 1 )",
     "parameter": [
@@ -3726,8 +3725,8 @@
     "error": "\"Invalid parameter\"",
     "related": "Character",
     "_name": "PerformAction"
-    },  
-  "PlayLightningBoltEffect":  
+    },
+  "PlayLightningBoltEffect":
   {
     "prototype": "PlayLightningBoltEffect( center_object )",
     "parameter": [{
@@ -3739,8 +3738,8 @@
     "error": "none (returns 0 if invalid parameter).",
     "related": "UObject",
     "_name": "PlayLightningBoltEffect"
-    },  
-  "PlayMovingEffect":  
+    },
+  "PlayMovingEffect":
   {
     "prototype": "PlayMovingEffect( source, target, effect, speed, loop := 0, explode := 0 )",
     "parameter": [
@@ -3777,8 +3776,8 @@
     "error": "none (returns 0 if invalid parameter)",
     "related": "UObject",
     "_name": "PlayMovingEffect"
-    },  
-  "PlayObjectCenteredEffect":  
+    },
+  "PlayObjectCenteredEffect":
   {
     "prototype": "PlayObjectCenteredEffect( center, effect, speed, loop := 0)",
     "parameter": [
@@ -3807,8 +3806,8 @@
     "error": "none (returns 0 on invalid parameter)",
     "related": "UObject",
     "_name": "PlayObjectCenteredEffect"
-    },  
-  "PlaySoundEffect":  
+    },
+  "PlaySoundEffect":
   {
     "prototype": "PlaySoundEffect( object, effect )",
     "parameter": [
@@ -3830,8 +3829,8 @@
     "error": "\"Invalid parameter\"",
     "related": "UObject",
     "_name": "PlaySoundEffect"
-    },  
-  "PlaySoundEffectXYZ":  
+    },
+  "PlaySoundEffectXYZ":
   {
     "prototype": "PlaySoundEffectXYZ( x, y, z, effect, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -3869,8 +3868,8 @@
     ],
     "related": "UObject",
     "_name": "PlaySoundEffectXYZ"
-    },  
-  "DestroyItem":  
+    },
+  "DestroyItem":
   {
     "prototype": "DestroyItem( Item )",
     "parameter": [{
@@ -3891,8 +3890,8 @@
     ],
     "related": "Item",
     "_name": "DestroyItem"
-    },  
-  "EquipItem":  
+    },
+  "EquipItem":
   {
     "prototype": "EquipItem( mobile, item )",
     "parameter": [
@@ -3928,8 +3927,8 @@
       "Item"
     ],
     "_name": "EquipItem"
-    },  
-  "MoveItemToContainer":  
+    },
+  "MoveItemToContainer":
   {
     "prototype": "MoveItemToContainer( item, container, x := -1, y := -1, add_to_existing_stack := 0 )",
     "parameter": [
@@ -3980,8 +3979,8 @@
       "Container"
     ],
     "_name": "MoveItemToContainer"
-    },  
-  "SubtractAmount":  
+    },
+  "SubtractAmount":
   {
     "prototype": "SubtractAmount( item, amount )",
     "parameter": [
@@ -4002,8 +4001,8 @@
     ],
     "related": "Item",
     "_name": "SubtractAmount"
-    },  
-  "CreateMultiAtLocation":  
+    },
+  "CreateMultiAtLocation":
   {
     "prototype": "CreateMultiAtLocation( x, y, z, objtype, flags := 0, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4064,8 +4063,8 @@
       "Boat"
     ],
     "_name": "CreateMultiAtLocation"
-    },  
-  "TargetMultiPlacement":  
+    },
+  "TargetMultiPlacement":
   {
     "prototype": "TargetMultiPlacement( character, objtype, flags := 0, xoffset := 0, yoffset := 0, hue := 0 )",
     "parameter": [
@@ -4120,8 +4119,8 @@
       "Character"
     ],
     "_name": "TargetMultiPlacement"
-    },  
-  "RegisterForSpeechEvents":  
+    },
+  "RegisterForSpeechEvents":
   {
     "prototype": "RegisterForSpeechEvents( at_object, range, flags := 0 )",
     "parameter": [
@@ -4153,8 +4152,8 @@
       "Character"
     ],
     "_name": "RegisterForSpeechEvents"
-    },  
-  "EnableEvents":  
+    },
+  "EnableEvents":
   {
     "prototype": "EnableEvents( eventtype, range := -1 )",
     "parameter": [
@@ -4176,8 +4175,8 @@
     "return": "Integer new event \"mask\" on success",
     "error": "\"Invalid parameter\"",
     "_name": "EnableEvents"
-    },  
-  "GetHarvestDifficulty":  
+    },
+  "GetHarvestDifficulty":
   {
     "prototype": "GetHarvestDifficulty( resource, x, y, tiletype, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4220,8 +4219,8 @@
     ],
     "relatedcfg": "resource.cfg",
     "_name": "GetHarvestDifficulty"
-    },  
-  "HarvestResource":  
+    },
+  "HarvestResource":
   {
     "prototype": "HarvestResource( resource, x, y, b, n, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4264,8 +4263,8 @@
     ],
     "relatedcfg": "resource.cfg",
     "_name": "HarvestResource"
-    },  
-  "CreateItemCopyAtLocation":  
+    },
+  "CreateItemCopyAtLocation":
   {
     "prototype": "CreateItemCopyAtLocation(x, y, z, item, realm := _DEFAULT_REALM)",
     "parameter": [
@@ -4302,8 +4301,8 @@
     "related": "Item",
     "relatedcfg": "itemdesc.cfg",
     "_name": "CreateItemCopyAtLocation"
-    },  
-  "SendQuestArrow":  
+    },
+  "SendQuestArrow":
   {
     "prototype": "SendQuestArrow(to_whom, x := -1, y := -1, target := \"\")",
     "parameter": [
@@ -4338,8 +4337,8 @@
     ],
     "related": "Character",
     "_name": "SendQuestArrow"
-    },  
-  "ListItemsNearLocationWithFlag":  
+    },
+  "ListItemsNearLocationWithFlag":
   {
     "prototype": "ListItemsNearLocationWithFlag( x, y, z, range, flags, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4391,8 +4390,8 @@
       "Array"
     ],
     "_name": "ListItemsNearLocationWithFlag"
-    },  
-  "ListMultisInBox":  
+    },
+  "ListMultisInBox":
   {
     "prototype": "ListMultisInBox( x1,y1,z1, x2,y2,z2, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4440,8 +4439,8 @@
       "Array"
     ],
     "_name": "ListMultisInBox"
-    },  
-  "SetName":  
+    },
+  "SetName":
   {
     "prototype": "SetName( object, name )",
     "parameter": [
@@ -4459,8 +4458,8 @@
     "error": "none (returns 0 on failure)",
     "related": "UObject",
     "_name": "SetName"
-    },  
-  "FindPath":  
+    },
+  "FindPath":
   {
     "prototype": "FindPath( x1, y1, z1, x2, y2, z2, realm := _DEFAULT_REALM, flags := FP_IGNORE_MOBILES, searchskirt := 5 )",
     "parameter": [
@@ -4526,8 +4525,8 @@
       "Array"
     ],
     "_name": "FindPath"
-    },  
-  "UseItem":  
+    },
+  "UseItem":
   {
     "prototype": "UseItem( item, character )",
     "parameter": [
@@ -4556,8 +4555,8 @@
       "NPC"
     ],
     "_name": "UseItem"
-    },  
-  "GetMultiDimensions":  
+    },
+  "GetMultiDimensions":
   {
     "prototype": "GetMultiDimensions( multiid )",
     "parameter": [{
@@ -4572,8 +4571,8 @@
     ],
     "related": "Multi",
     "_name": "GetMultiDimensions"
-    },  
-  "FindSubstance":  
+    },
+  "FindSubstance":
   {
     "prototype": "FindSubstance( container, objtype, amount, makeinuse := 0, flags := 0 )",
     "parameter": [
@@ -4615,8 +4614,8 @@
     ],
     "related": "Container",
     "_name": "FindSubstance"
-    },  
-  "SecureTradeWin":  
+    },
+  "SecureTradeWin":
   {
     "prototype": "SecureTradeWin( character, character2 )",
     "parameter": [
@@ -4645,8 +4644,8 @@
     ],
     "related": "Character",
     "_name": "SecureTradeWin"
-    },  
-  "MoveItemToSecureTradeWin":  
+    },
+  "MoveItemToSecureTradeWin":
   {
     "prototype": "MoveItemToSecureTradeWin( item, character )",
     "parameter": [
@@ -4679,8 +4678,8 @@
       "Character"
     ],
     "_name": "MoveItemToSecureTradeWin"
-    },  
-  "Attach":  
+    },
+  "Attach":
   {
     "prototype": "Attach( character )",
     "parameter": [{
@@ -4696,8 +4695,8 @@
     ],
     "related": "Character",
     "_name": "Attach"
-    },  
-  "ListStaticsAtLocation":  
+    },
+  "ListStaticsAtLocation":
   {
     "prototype": "ListStaticsAtLocation( x, y, z, flags := 0, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4741,8 +4740,8 @@
       "Array"
     ],
     "_name": "ListStaticsAtLocation"
-    },  
-  "ListStaticsNearLocation":  
+    },
+  "ListStaticsNearLocation":
   {
     "prototype": "ListStaticsNearLocation( x, y, z, range, flags := 0, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4790,8 +4789,8 @@
       "Array"
     ],
     "_name": "ListStaticsNearLocation"
-    },  
-  "ListStaticsNearLocationOfType":  
+    },
+  "ListStaticsNearLocationOfType":
   {
     "prototype": "ListStaticsNearLocationOfType( x, y, z, range, objtype, flags := 0, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4842,8 +4841,8 @@
       "Array"
     ],
     "_name": "ListStaticsNearLocationOfType"
-    },  
-  "ListStaticsNearLocationWithFlag":  
+    },
+  "ListStaticsNearLocationWithFlag":
   {
     "prototype": "ListStaticsNearLocationWithFlag( x, y, z, range, flags, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4895,8 +4894,8 @@
       "Array"
     ],
     "_name": "ListStaticsNearLocationWithFlag"
-    },  
-  "GetStandingLayers":  
+    },
+  "GetStandingLayers":
   {
     "prototype": "GetStandingLayers( x, y, flags := MAPDATA_FLAG_ALL, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4937,8 +4936,8 @@
       "Struct"
     ],
     "_name": "GetStandingLayers"
-    },  
-  "ListStaticsInBox":  
+    },
+  "ListStaticsInBox":
   {
     "prototype": "ListStaticsInBox( x1,y1,z1, x2,y2,z2, flags := 0, realm := _DEFAULT_REALM )",
     "parameter": [
@@ -4993,8 +4992,8 @@
       "Array"
     ],
     "_name": "ListStaticsInBox"
-    },  
-  "SendStatus":  
+    },
+  "SendStatus":
   {
     "prototype": "SendStatus( character )",
     "parameter": [{
@@ -5010,8 +5009,8 @@
     ],
     "related": "Character",
     "_name": "SendStatus"
-    },  
-  "MoveObjectToLocation":  
+    },
+  "MoveObjectToLocation":
   {
     "prototype": "MoveObjectToLocation( object, x, y, z, realm := _DEFAULT_REALM, flags := MOVEOBJECT_NORMAL )",
     "parameter": [
@@ -5083,8 +5082,8 @@
       "UObject"
     ],
     "_name": "MoveObjectToLocation"
-    },  
-  "CoordinateDistance":  
+    },
+  "CoordinateDistance":
   {
     "prototype": "CoordinateDistance(x1, y1, x2, y2)",
     "parameter": [
@@ -5110,8 +5109,8 @@
     "error": "\"Invalid parameter type\"",
     "related": "UObject",
     "_name": "CoordinateDistance"
-    },  
-  "GetCoordsInLine":  
+    },
+  "GetCoordsInLine":
   {
     "prototype": "GetCoordsInLine(x1, y1, x2, y2)",
     "parameter": [
@@ -5137,8 +5136,8 @@
     "error": "\"Invalid parameter type\"",
     "related": "UObject",
     "_name": "GetCoordsInLine"
-    },  
-  "GetFacing":  
+    },
+  "GetFacing":
   {
     "prototype": "GetFacing(from_x, from_y, to_x, to_y)",
     "parameter": [
@@ -5168,8 +5167,8 @@
       "UObject"
     ],
     "_name": "GetFacing"
-  },    
-  "SendCharacterRaceChanger":  
+  },
+  "SendCharacterRaceChanger":
   {
     "prototype": "SendCharacterRaceChanger( character )",
     "parameter": [{
@@ -5181,8 +5180,8 @@
     "error": "\"Invalid parameter\"",
     "related": "Character",
     "_name": "SendCharacterRaceChanger"
-    },  
-  "IsStackable":  
+    },
+  "IsStackable":
   {
     "prototype": "IsStackable( item1, item2 )",
     "parameter": [

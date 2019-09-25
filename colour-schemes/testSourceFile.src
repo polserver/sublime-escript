@@ -1,0 +1,111 @@
+use uo;
+
+program ThisProgram(arg1, arg2)
+
+	//variable test
+	var variable := this;
+	var 2 := CustomFunction(doing_stuff, 2ndArg );
+
+	//if block test
+	if( Operator != Test )
+		Inside();
+	elseif( Operator >= test <= test == test && )
+	endif
+
+
+	//out of line if
+	elseif ()
+
+	//const test
+	const ConstantTest := 44;
+	//core const test
+	const That := POLCLASS_UOBJECT;
+
+	//core function test
+	SendSysMessage(character, text, font := _DEFAULT_TEXT_FONT, color := _DEFAULT_TEXT_COLOR);
+
+
+// This is a comment
+
+/*
+	This is a block comment.
+	Another comment
+*/
+
+
+//do-while test
+do
+	//core member test
+	this.banned
+
+	//core method test
+	that.getprop( propname );
+
+dowhile
+
+repeat
+1
+2
+3
+4
+5
+6
+until
+
+while
+
+endwhile
+
+for(i:=1; 1<=5 ; i+i)
+
+endfor
+
+foreach This in (that)
+
+endforeach
+
+//correct function test
+function Blah( args1, args2, byref param )
+
+endfunction
+
+//exported test
+exported function Didit()
+endfunction
+
+
+	case (This)
+		"CaseOption": is this;
+		TextSwitch: that;
+		12: other;
+		DEFAULT: something;
+	endcase
+
+endprogram
+
+//incorrect function (INVALID HIGHLIGHT)
+function
+endfunction
+
+//deprecated tests
+function depreciatedTest( equals )
+
+//deprecated evaluation
+if( incorrect = equalSign )
+
+//non-dreprecated equal sign
+if( correct := equalsign )
+
+	//valid function
+	ValidFunction();
+
+    //Deprecated function
+	GetElemProperty();
+
+	//or
+	Damage();
+
+	if( this and that or other)
+	endif
+endif
+
