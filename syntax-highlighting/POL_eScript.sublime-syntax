@@ -445,7 +445,7 @@ contexts:
       scope: keyword.operator.bitwise.polscript
     - match: '(==|!=|!|<=|<|>=|>)'
       scope: keyword.operator.logical.polscript
-    - match: '(?i)\b(and|or|=)\b'
+    - match: '(?i)\b(and|or|=|not)\b'
       scope: invalid.deprecated.polscript
     - match: '(?i)\s(=)\s'
       scope: invalid.deprecated.polscript
