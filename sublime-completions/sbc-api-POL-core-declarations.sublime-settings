@@ -34,7 +34,10 @@
 
         // Function
         ["function\tscript", "function $1($2)\nendfunction" ],
-        ["exported function\tscript", "exported function $1($2)\nendfunction" ]
+        ["exported function\tscript", "exported function $1($2)\nendfunction" ],
+
+        //errors
+        ["error\terrortext", "error{ \"errortext\" := $1 }"]
 
     ]
 
