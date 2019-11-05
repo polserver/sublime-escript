@@ -2,7 +2,6 @@ import sublime
 import sublime_plugin
 import webbrowser
 import datetime
-import logging
 import hashlib
 import json
 import time
@@ -11,8 +10,7 @@ import os
 
 # get the current version of sublime text
 CURRENT_VERSION = int(sublime.version()) >= 3080
-# logging messeges for debuging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 
 class Utilities():
@@ -328,7 +326,6 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
             try:
                 webbrowser.open_new_tab(href)
             except Exception as e:
-                # logging.error('cannot open link on web browser.')
                 self.logger_msg += str(e) + '\n'
 
     def get_user_selection(self, sel):
@@ -542,7 +539,6 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
             json_data = self.read_JSON(file_path)
             return json_data[search_result]
         except Exception as e:
-            # logging.error('Documentation not exist in: \"%s\"' % file_path)
             self.logger_msg += str(e) + '\n'
             return {}
 
