@@ -1,15 +1,18 @@
 {
-	"selector": "source.polscript source.script.polscript",
+	"selector": "source.polscript",
 
 	"windows": {
-        "cmd": ["$folder\\scripts\\ecompile.exe", "-b -r", "$file"]
+        "cmd": ["$folder\\scripts\\ecompile.exe", "-c", "$file"],
+        "file_regex": "(\\S*\\.(?:src|inc)), Line (\\d*)",
+        "working_dir": "$folder",
+        "quiet": true
     },
 
 	"variants": [
 		{
 			"name": "Build All",
         	"windows": {
-		        "cmd": ["$folder\\scripts\\ecompile.exe", "-b -r"]
+		        "cmd": ["$folder\\scripts\\ecompile.exe", "-b","-r"]
 		    }
 		}
     ]
