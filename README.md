@@ -21,9 +21,9 @@ https://github.com/DracoScript/POL_eScript_Sublime
 
 # To install:
 1. Open Sublime Text
-2. Click Preferences -> Browse Packages
-3. Create a folder called "eScript Syntax"
-4. Clone repository into that folder and restart sublime text
+2. Click Preferences -> Package Control (Or press CTRL+ALT+P)
+3. Type 'Install'and select "Package Control: Install Package"
+4. Type 'eScript' and it should be the first result being "eScript Syntax"
 5. Click Preferences -> Color Scheme and select Monokai - POL
 
 At this stage none of the default colours schemes will work with the tool tip system.
