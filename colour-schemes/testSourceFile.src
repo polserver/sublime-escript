@@ -12,6 +12,10 @@ program ThisProgram(arg1, arg2)
 	elseif( Operator >= test <= test == test && )
 	endif
 
+	Target()
+	TargetCoordinates()
+	Broadcast()
+	array.append()
 
 	//out of line if
 	elseif ()
