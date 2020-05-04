@@ -1,0 +1,49 @@
+POL eScript Syntax package has been updated to version 1.2.1
+
+--THIS VERSION--
+1.2.1:
+- Fixed missing constant SYSFIND_SEARCH_STORAGE_AREAS
+- Fixed escaping a string closure with \" would cause the string to close and the rest of the script to render incorrectly and report other errors.
+- Added new messages for updates and install moving forward.
+
+--PREVIOUS VERSIONS--
+1.2.0:
+- Removed duplicate build file.
+- Updated build options to allow for linking of errors.
+- Remove lines related to using a logger which no longer has a use in the tooltips system.
+- Added autocompletion snippit for error text.
+
+1.1.0:
+- Added Pangaea theme and submitted by ThisIsMe
+- Added NOT keyword to deprecated list.
+- Improvements for regex highlighting.
+- Correct detection of a few deprecated items.
+- Fixed function params not being defined correctly.
+- Included a new testSourceFile.src for testing colour schemes.
+- Forced file output to be UTF-8 to bring files inline with core requirements.
+
+1.0.0:
+- Changed background of Monokai POL color scheme
+- Fixed some menu items.
+- Removed .no-sublime-package file so that package gets packed up. Updated all functions to use packaged items system.
+- Rectified Hex to Int converter looking at whole line when trying to convert.
+- Changed tooltip package to load from packaged database files.
+- Update completion and highlight files to include new AOS properties.
+- Update highlighting to match current core version 100
+- Update autocomplete for constants.
+- Move constant autocompletes to its own folder.
+- Added highlight type for deprecated functions.
+- Added new commands for converting INT <-> HEX.
+- Right click on an int or hex will offer a conversion context menu.
+- Edit > Numeric > HEX <-> INT menu option.
+- Preferences> POL Server > HEX <-> INT menu option.
+
+0.9.3:
+- Fix for single param tool tips.
+
+0.9.2:
+- Fixed keymap bug.
+- Removed .no-sublime-package file.
+
+0.9.1:
+Initial public commit.

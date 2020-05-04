@@ -462,6 +462,8 @@ contexts:
   inside_string_double:
     - meta_include_prototype: false
     - meta_scope: string.quoted.double.polscript
+    - match: '\\"'
+      pop: false
     - match: '"'
       scope: punctuation.definition.string.end.polscript
       pop: true

@@ -1,0 +1,16 @@
+Thankyou for installing the POL eScript Syntax Highlighter Package.
+This package does include some more features than just simple syntax highlighting.
+It also includes:
+Autocomplete for core functions.
+A few eScript snippits.
+A few colour schemes as put out by the POL Community.
+A Hex to Int converter.
+Error reporting on compile.
+
+HEX <-> INT
+To trigger the hex to int converter, first either highlight or center your cursor on a Hex or Int number.
+You can then use either the 
+Edit menu > HEX<->INT
+Preferences > Pol Server Settings> HEX<->INT
+Right Click > Convert To <HEX|INT>
+Alt+Shift+C
