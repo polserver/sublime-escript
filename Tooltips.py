@@ -653,7 +653,7 @@ class ToolTipHelperCommand(sublime_plugin.TextCommand):
 
 
 """Credit to: https://github.com/huot25/StyledPopup"""
-from plistlib import readPlistFromBytes
+from plistlib import loads
 
 def show_popup(view, content, *args, **kwargs):
     """Parse the color scheme if needed and show the styled pop-up."""
@@ -818,7 +818,7 @@ class SchemeParser():
     def read_scheme(self, scheme):
         """Converts supplied scheme(bytes) to python dict."""
 
-        return  readPlistFromBytes(scheme)
+        return loads(scheme)
 
     def generate_style_sheet_content(self, properties):
         file_content = ""
